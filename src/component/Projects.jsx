@@ -29,7 +29,7 @@ const Projects = () => {
           {projectImages.map((image, index) => (
             <ImageCard
               key={index}
-              image={`/src/img/${image}`}
+              image={new URL(`../img/${image}`, import.meta.url).href}
               title={`Công Trình ${index + 1}`}
               description="Cắt laser - Hàn kỹ thuật"
             />

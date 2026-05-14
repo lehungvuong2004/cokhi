@@ -73,7 +73,7 @@ const ProjectGallery = () => {
               return (
                 <ImageCard
                   key={filename}
-                  image={`/src/img/${filename}`}
+                  image={new URL(`../img/${filename}`, import.meta.url).href}
                   title={fileData.title}
                   description={fileData.description}
                   onClick={() => handleImageClick(filename)}
@@ -105,7 +105,7 @@ const ProjectGallery = () => {
             {/* Image */}
             <div className="relative w-full aspect-auto">
               <img 
-                src={`/src/img/${selectedImage}`} 
+                src={new URL(`../img/${selectedImage}`, import.meta.url).href} 
                 alt={selectedImage}
                 className="w-full h-auto rounded-lg shadow-2xl"
               />

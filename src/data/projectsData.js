@@ -27,7 +27,7 @@ export const projectsData = filenames.map((file, index) => {
   
   return {
     id: index + 1,
-    image: `/src/img/${file}`,
+    image: new URL(`../img/${file}`, import.meta.url).href,
     title: title,
     description: description,
     content: `
