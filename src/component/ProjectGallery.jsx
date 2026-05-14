@@ -106,7 +106,7 @@ const ProjectGallery = () => {
             <div className="relative w-full aspect-auto">
               <img 
                 src={new URL(`../img/${selectedImage}`, import.meta.url).href} 
-                alt={selectedImage}
+                alt={projectData[selectedImage]?.title || 'Dự án Cơ Khí Mạnh Hùng'}
                 className="w-full h-auto rounded-lg shadow-2xl"
               />
             </div>
