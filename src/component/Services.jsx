@@ -3,12 +3,12 @@ import React from 'react';
 const Services = () => {
   const services = [
     {
-      icon: 'fa-laser',
+      icon: 'fa-solid fa-layer-group',
       title: 'Cắt Laser CNC',
       description: 'Cắt laser tinh xảo với độ chính xác cao, đáp ứng các tiêu chuẩn quốc tế, xử lý mọi loại vật liệu kim loại.'
     },
     {
-      icon: 'fa-fire',
+      icon: 'fa-solid fa-fire',
       title: 'Hàn Kỹ Thuật',
       description: 'Hàn chuyên nghiệp sử dụng các kỹ thuật hiện đại, đảm bảo chất lượng và độ bền cao của sản phẩm.'
     },

@@ -6,6 +6,12 @@ function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [prevPath, setPrevPath] = useState(location.pathname);
+
+  if (location.pathname !== prevPath) {
+    setIsMobileMenuOpen(false);
+    setPrevPath(location.pathname);
+  }
 
   // Xử lý sự kiện cuộn chuột
   useEffect(() => {
@@ -21,11 +27,6 @@ function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Close mobile menu when route changes
-  useEffect(() => {
-    setIsMobileMenuOpen(false);
-  }, [location.pathname]);
-
   const menuItems = [
     { name: 'Trang Chủ', path: '/' },
     { name: 'Giới Thiệu', path: '/gioi-thieu' },
@@ -37,7 +38,7 @@ function Header() {
 
   return (
     <header className="w-full z-50 font-sans relative">
-      
+
       {/* --- 1. TOPBAR (Thanh đen) --- 
           Nó sẽ biến mất (ẩn đi) khi lướt xuống nhờ logic !isScrolled
       */}
@@ -47,19 +48,20 @@ function Header() {
             Chất lượng tạo nên uy tín - Cơ Khí Mạnh Hùng
           </div>
           {/* contact */}
-         
+
           <div className="flex items-center gap-x-6">
-             <div className="">
-            <div className="flex items-center gap-x-4 border-r border-slate-700 pr-6">
-              <a href="https://facebook.com" target='_blank' rel="noreferrer" className="hover:text-amber-500 transition-colors">
-                <i className="fa-brands fa-facebook text-lg"></i>
-              </a>
-              <a href="mailto:email@gmail.com" className="hover:text-amber-500 transition-colors">
-                <i className="fa-solid fa-envelope text-lg"></i>
-              </a>
-              <a href="#" className="hover:text-amber-500 transition-colors font-bold">Zalo</a>
+            <div className="">
+              <div className="flex items-center gap-x-4 border-r border-slate-700 pr-6">
+                <Link to="https://www.facebook.com/nguyen.manh.hung.751416" target='_blank' rel="noreferrer" className="hover:text-amber-500 transition-colors">
+                  <i className="fa-brands fa-facebook text-lg"></i>
+                </Link>
+                <a href="mailto:nguyenmanhhung28089899@gmail.com
+" className="hover:text-amber-500 transition-colors">
+                  <i className="fa-solid fa-envelope text-lg"></i>
+                </a>
+                <Link to="https://zalo.me/0961570201" target='_blank' rel="noreferrer" className="hover:text-amber-500 transition-colors font-bold">Zalo</Link>
+              </div>
             </div>
-          </div>
             <div className="flex items-center gap-x-2 text-amber-400 font-bold">
               <i className="fa-solid fa-phone-volume"></i>
               <span>0961.570.201</span>
@@ -68,16 +70,13 @@ function Header() {
         </div>
       </div>
 
-      {/* --- 2. MAIN NAV (Thanh trắng) --- 
-          Khi isScrolled = true, nó sẽ trở thành fixed top-0
-      */}
       <div className={`w-full transition-all duration-300 shadow-md z-50 
-        ${isScrolled 
-          ? 'fixed top-0 bg-white/95 backdrop-blur-md py-2' 
+        ${isScrolled
+          ? 'fixed top-0 bg-white/95 backdrop-blur-md py-2'
           : 'relative bg-white py-4'}`}
       >
         <div className="container mx-auto px-4 md:px-10 flex justify-between items-center relative">
-          
+
           {/* Logo Section */}
           <Link to="/" className="flex items-center gap-3 group z-50">
             <div className={`bg-amber-500 rounded-lg flex items-center justify-center text-slate-900 shadow-lg transition-all 
@@ -112,7 +111,7 @@ function Header() {
             <button className="p-2 hover:bg-amber-100 rounded-full transition-colors hidden md:block">
               <i className="fa-solid fa-magnifying-glass text-lg"></i>
             </button>
-            <button 
+            <button
               className="lg:hidden p-2 text-slate-800 hover:text-amber-600 transition-colors"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
@@ -123,7 +122,7 @@ function Header() {
         </div>
 
         {/* --- 3. MOBILE MENU (Thả xuống) --- */}
-        <div 
+        <div
           className={`lg:hidden absolute top-full left-0 w-full bg-white shadow-xl transition-all duration-300 origin-top overflow-hidden
           ${isMobileMenuOpen ? 'max-h-96 opacity-100 border-t border-slate-100' : 'max-h-0 opacity-0'}`}
         >

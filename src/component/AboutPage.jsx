@@ -2,7 +2,7 @@ import React from 'react';
 
 const AboutPage = () => {
   return (
-    <div className="py-24 bg-white min-h-screen font-sans">
+    <div className=" bg-white min-h-screen font-sans">
       <div className="container mx-auto px-4 md:px-10 flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
         
         {/* CỘT TRÁI: TIÊU ĐỀ VÀ MÔ TẢ */}

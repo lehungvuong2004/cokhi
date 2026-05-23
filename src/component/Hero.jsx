@@ -99,7 +99,7 @@ const Hero = () => {
                 <div className="space-y-6">
                   <div className="flex items-center gap-4 p-4 bg-slate-800/50 rounded-lg backdrop-blur border border-slate-700/50">
                     <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-amber-500 to-orange-500 flex items-center justify-center">
-                      <i className="fas fa-laser text-white text-xl"></i>
+                      <i class="fa-solid fa-layer-group text-white text-xl"></i>
                     </div>
                     <div>
                       <p className="font-bold text-white">Cắt Laser CNC</p>

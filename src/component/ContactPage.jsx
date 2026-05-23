@@ -28,22 +28,22 @@ const ContactPage = () => {
     {
       icon: 'fa-solid fa-location-dot',
       title: 'Địa Chỉ Trụ Sở',
-      content: '123 Đường Công Nghiệp, KCN Tân Bình, TP.HCM'
+      content: '68 Bùi Tấn Diên, Đà Nẵng'
     },
     {
       icon: 'fa-solid fa-phone-volume',
       title: 'Hotline 24/7',
-      content: '0961.570.201\n028.3812.3456'
+      content: '0961.570.201'
     },
     {
       icon: 'fa-solid fa-envelope',
       title: 'Email Hỗ Trợ',
-      content: 'info@manhhungmec.com\nsale@manhhungmec.com'
+      content: 'nguyenmanhhung28089899@gmail.com'
     },
     {
       icon: 'fa-solid fa-clock',
       title: 'Giờ Làm Việc',
-      content: 'Thứ 2 - Thứ 7: 8:00 - 17:30\nChủ Nhật: Nghỉ định kỳ'
+      content: 'Thứ 2 - Thứ 7: 7h30 - 17h00\nChủ Nhật: Nghỉ định kỳ'
     }
   ];
 
@@ -128,7 +128,7 @@ const ContactPage = () => {
           {/* Map and Socials */}
           <div className="lg:col-span-2 bg-slate-900 text-white flex flex-col justify-between order-1 lg:order-2">
             {/* Map iframe */}
-            <div className="h-64 md:h-80 lg:h-[450px] w-full bg-slate-800">
+            {/* <div className="h-64 md:h-80 lg:h-[450px] w-full bg-slate-800">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1m3!1d3919.060281987515!2d106.62624891533423!3d10.806694692300898!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752be27d8b4f4d%3A0x92dcba2950430867!2zS0NOIFTDom4gQsOsbmg!5e0!3m2!1svi!2s!4v1689234567890!5m2!1svi!2s"
                 className="w-full h-full border-0 grayscale hover:grayscale-0 transition-all duration-500"
@@ -137,7 +137,7 @@ const ContactPage = () => {
                 referrerPolicy="no-referrer-when-downgrade"
                 title="Bản đồ chỉ đường"
               ></iframe>
-            </div>
+            </div> */}
 
             <div className="p-8 md:p-10 flex-grow flex flex-col justify-center">
               <h3 className="text-xl font-bold mb-4 text-amber-500 uppercase">Kết Nối Với Chúng Tôi</h3>

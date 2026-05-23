@@ -32,12 +32,12 @@ const CTA = () => {
             <div className="space-y-2">
               <i className="fas fa-envelope text-amber-400 text-2xl"></i>
               <p className="text-gray-700 text-sm">Email</p>
-              <p className="text-white font-bold text-lg">info@manhhung.com</p>
+              <p className="text-white font-bold text-lg">nguyenmanhhung28089899</p>
             </div>
             <div className="space-y-2">
               <i className="fas fa-map-marker-alt text-amber-400 text-2xl"></i>
               <p className="text-gray-700 text-sm">Địa chỉ</p>
-              <p className="text-white font-bold text-lg">TP. Hồ Chí Minh</p>
+              <p className="text-white font-bold text-lg">68 Bùi Tấn Diên, Đà Nẵng</p>
             </div>
           </div>
 
