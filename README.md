@@ -10,6 +10,7 @@ A modern React + Vite website for a mechanical engineering company specializing 
 - **Navigation System**: React Router for smooth page navigation
 - **Performance Optimized**: Fast HMR with Vite development server
 
+## 🚀 Demo: https://cokhimanhhung.vercel.app/
 ## 🛠 Tech Stack
 
 - **Frontend Framework**: React 19.2.4
